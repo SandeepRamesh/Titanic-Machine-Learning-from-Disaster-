@@ -20,6 +20,7 @@ titanic_test= pd.read_csv('test.csv')
 #To check for missing values
 titanic_train.info()
 titanic_test.info()
+titanic_train.describe()
 
 #plotting the scatter matrix first
 import matplotlib.pyplot as plt
