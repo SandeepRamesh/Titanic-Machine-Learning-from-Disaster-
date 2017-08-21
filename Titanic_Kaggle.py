@@ -122,45 +122,7 @@ y_train=titanic_train['Survived']
 x_test=titanic_test.drop(['PassengerId'],1)
 
 
-#Fitting and predicting the various Machine Learning Algorithms
-
-lr=LogisticRegression(random_state=0)
-lr=lr.fit(x_train,y_train)
-y_pred_lr=lr.predict(x_test)
-score=lr.score(x_train,y_train)
-print("Logistic Regression Classifier score:{}".format(score))
-
-rfc=RandomForestClassifier(n_estimators=100,criterion='entropy',random_state=0)
-rfc=rfc.fit(x_train,y_train)
-y_pred_rf=rfc.predict(x_test)
-score1=rfc.score(x_train,y_train)
-print("Random forest Classifier score:{}".format(score1))
-
-
-knn = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
-knn=knn.fit(x_train, y_train)
-y_pred_knn=knn.predict(x_test)
-score=knn.score(x_train,y_train)
-print("K Nearest Neighbors Classifier score:{}".format(score))
-
-nb = GaussianNB()
-nb=nb.fit(x_train,y_train)
-y_pred_nb=nb.predict(x_test)
-score=nb.score(x_train,y_train)
-print("Naive Bayes Classifier score:{}".format(score))
-
-svc = SVC(kernel = 'rbf', random_state = 0)
-svc.fit(x_train, y_train)
-y_pred_svc = svc.predict(x_test)
-score=svc.score(x_train,y_train)
-print("Kernel SVM Classifier score:{}".format(score))
-
-
-xg = XGBClassifier(max_depth=3,n_estimators=100)
-xg.fit(x_train, y_train)
-y_pred_xgb = xg.predict(x_test)
-score=xg.score(x_train,y_train)
-print("XG Boost Classifier score:{}".format(score))
+/*Model Selection and validation hidden for confidentiality purposes*/
 
 #Random Forest is the best classifier according to the score
 #and XGB is the best predictor of the test set 
